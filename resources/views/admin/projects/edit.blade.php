@@ -20,22 +20,30 @@
                         </div>
                     </div>
 
-                    <div class="card-header d-flex align-items-center">
-                        <h6 class="me-4 my-0">
-                            <strong>Status Project:</strong>
-                        </h6>
-                        <label class="form-check-label me-4">
-                            <input type="radio" name="status" value="" {{ $project->status === null ? 'checked' : '' }} class="form-check-input">
-                            Currently in Development
-                        </label>
-                        <label class="form-check-label me-4">
-                            <input type="radio" name="status" value="0" {{ $project->status === 0 ? 'checked' : '' }} class="form-check-input">
-                            Suspended
-                        </label>
-                        <label class="form-check-label me-4">
-                            <input type="radio" name="status" value="1" {{ $project->status === 1 ? 'checked' : '' }} class="form-check-input">
-                            Completed
-                        </label>
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                        <div class="status-container d-flex align-items-center">
+                            <h6 class="me-4 my-0">
+                                <strong>Status Project:</strong>
+                            </h6>
+                            <label class="form-check-label me-4">
+                                <input type="radio" name="status" value="" {{ $project->status === null ? 'checked' : '' }} class="form-check-input">
+                                Currently in Development
+                            </label>
+                            <label class="form-check-label me-4">
+                                <input type="radio" name="status" value="0" {{ $project->status === 0 ? 'checked' : '' }} class="form-check-input">
+                                Suspended
+                            </label>
+                            <label class="form-check-label me-4">
+                                <input type="radio" name="status" value="1" {{ $project->status === 1 ? 'checked' : '' }} class="form-check-input">
+                                Completed
+                            </label>
+                        </div>
+                        <div class="type-container d-flex align-items-center">
+                            <h6 class="me-2 my-0">
+                                <strong>Type:</strong>
+                            </h6>
+                            {{ $project->type->name }}
+                        </div>
                     </div>
 
                     <div class="card-body">

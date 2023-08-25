@@ -10,6 +10,7 @@
                         <tr class="table-info">
                           <th scope="col">ID</th>
                           <th scope="col">Title</th>
+                          <th scope="col">Type</th>
                           <th scope="col">Partecipants</th>
                           <th scope="col">Goals</th>
                           <th scope="col">Budget</th>
@@ -25,6 +26,9 @@
                                 </th>
                                 <td>
                                     {{ $project->title }}
+                                </td>
+                                <td>
+                                    {{ $project->type->name }}
                                 </td>
                                 <td>
                                     {{ $project->nPartecipants }}
