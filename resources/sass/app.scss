@@ -1,0 +1,57 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// FontAwesome
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+textarea {
+    height: 300px !important;
+}
+
+.img-preview-container.create {
+    display: none;
+}
+
+.img-preview-container.edit {
+    display: block;
+}
+
+.img-preview-container.create.visibility {
+    display: block;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.goal-item {
+    &:hover {
+        background: lightgrey;
+    }
+
+    .goal-item-icon {
+        display: none;
+
+        i {
+            color: rgb(107, 105, 105);
+        }
+    }
+
+    &:hover .goal-item-icon {
+        display: block;
+        cursor: pointer;
+        scale: 1.5;
+    }
+
+    &:hover .current-goal {
+        scale: 1.1;
+    }
+
+}
